@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="34.004" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-06-02T10:05:26.371991600Z">
+<testcase classname="Login" name="Successfull login of SauceDemo" time="11.756">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;test&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "test" is null
+	at utils.Reporter.generateReport(Reporter.java:21)
+	at pages.LoginPage.validateLogin(LoginPage.java:37)
+	at stepDefinitions.LoginStepDef.the_user_enters_username_as_and_password_as_and_click_login_button(LoginStepDef.java:33)
+	at ✽.the user enters username as "standard_user" and password as "secret_sauce" and click login button(file:///C:/Users/admin/Downloads/BDD_SauceDemo3/src/test/resources/features1/login.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on login page.............................................passed
+When the user enters username as "standard_user" and password as "secret_sauce" and click login button.failed
+Then the user validates the text Products...................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Failure login of SauceDemo" time="20.964">
+<failure type="org.openqa.selenium.NoSuchSessionException" message="invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93f0d276de9aefdde7d1d5018b6617b7, findElement {value=//span[text()='Products'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54305/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93f0d276de9aefdde7d1d5018b6617b7">
+<![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.36)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93f0d276de9aefdde7d1d5018b6617b7, findElement {value=//span[text()='Products'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.36, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54305/devtoo..., se:cdpVersion: 134.0.6998.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93f0d276de9aefdde7d1d5018b6617b7
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at pages.LoginPage.validateLogin(LoginPage.java:36)
+	at stepDefinitions.LoginStepDef.the_user_enters_username_as_and_password_as_and_click_login_button(LoginStepDef.java:33)
+	at ✽.the user enters username as "standard_user" and password as "secret_sauce1" and click login button(file:///C:/Users/admin/Downloads/BDD_SauceDemo3/src/test/resources/features1/login.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on login page.............................................passed
+When the user enters username as "standard_user" and password as "secret_sauce1" and click login button.failed
+Then the user validates error message.......................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
